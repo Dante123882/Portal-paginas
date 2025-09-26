@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+</head>
+<body>
+    <form name="Form1" action="">
+        <button type="button" onclick="ingresarNombre()">
+            ingresar nombre
+        </button>
+        <hr>
+        <button type="button" onclick="CalcularEdad()">
+            Ingresa tu año de nacimiento
+        </button>
+    </form>
+
+</body>
+<script>
+    function ingresarNombre(){
+        let nombre = prompt("Por favor, ingresa tu nombre:");
+        
+        alert("Hola " + nombre);
+    }
+    function CalcularEdad(){
+        let year = prompt("Por favor, ingresa tu año de nacimiento:");
+        let edad=2025 - year;
+        
+        alert("Tu edad es " + edad);
+    }
+</script>
+</html>
