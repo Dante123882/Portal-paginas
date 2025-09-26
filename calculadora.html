@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estiloCalculadora.css">
+    <title>Js</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <h2>Coloca tus numeros</h2>
+    <form action="" class="formulario">
+        <input type="text" name="numero1" id="numero1" placeholder="Ingresa el primer N">
+        <input type="text" name="numero2" id="numero2" placeholder="Ingresa el segundo N">
+        <input type="text" name="resultado" id="resultado" placeholder="Resultado" readonly>
+
+        <br/><br/>
+        <div class="button-grid">
+            <button type="button" onclick="calcularSuma()"> +</button>
+            <button type="button" onclick="calcularResta()"> -</button>
+            <button type="button" onclick="calcularmultiplicacion()">x</button>
+            <button type="button" onclick="calcularDivision()"> ÷ </button>
+        </div>
+    </form>
+<script src="script.js"></script>
+</body>
+</html>
+

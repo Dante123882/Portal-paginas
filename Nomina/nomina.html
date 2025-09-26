@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomina</title>
+    <link rel="stylesheet" href="estilo/estiloFormulario.css"/> 
+</head>
+<body>
+    <h1>Registro de Nómina</h1>
+    <hr>
+
+    <form action="" class="formulario">
+        
+        <input type="text" name="empleadoID" id="empleadoID" placeholder="ID del empleado">
+        
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre del empleado">
+        
+        <input type="text" name="horasTrabajadas" id="horasTrabajadas" placeholder="Horas trabajadas (Semana)">
+        
+        <input type="text" name="tarifaHora" id="tarifaHora" placeholder="Costo por hora">
+            
+        <input type="text" name="horasNormales" id="horasNormales" placeholder="Horas normales" readonly>
+    
+        <input type="text" name="horasExtras" id="horasExtras" placeholder="Horas extras" readonly>
+        
+        <input type="text" name="Subtotal" id="Subtotal" placeholder="Subtotal" readonly>
+        
+        <input type="text" name="ISP" id="ISP" placeholder="ISP(10%)" readonly>
+        
+        <input type="text" name="Monto" id="Monto" placeholder="Monto a pagar" readonly>
+
+        <br/><br/>
+        
+            <button type="button" onclick="calcularNomina()">Calcular</button>
+            <button type="button" onclick="limpiarFormulario()">Limpiar</button>
+<script src="Script/scriptNomina.js"></script>
+</body>
+</html>

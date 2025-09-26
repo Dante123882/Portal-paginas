@@ -1,0 +1,115 @@
+/* Variables CSS para una gestión de colores más sencilla */
+:root {
+  --background-color: #102638; /* Azul muy claro, casi blanco */
+  --calculator-bg: #e0f2fe; /* Azul claro para el fondo de la calculadora */
+  --input-bg: #fff; /* Blanco para los campos de texto */
+  --input-border: #b3e5fc; /* Borde azul claro */
+  --button-color: #000000; /* Azul vibrante para botones */
+  --button-hover-color: #0288d1; /* Azul más oscuro al pasar el cursor */
+  --operator-color: #ff9800; /* Naranja para operadores */
+  --operator-hover-color: #fb8c00; /* Naranja más oscuro */
+  --result-color: #4caf50; /* Verde para el resultado */
+  --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--background-color);
+  color: #333;
+}
+
+h1, h2 {
+  color: #ffffffd2;
+  text-align: center;
+}
+
+/* Contenedor principal de la calculadora */
+.calculator-container {
+  background-color: var(--calculator-bg);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo para los campos de entrada y resultado */
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid var(--input-border);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: right;
+  background-color: var(--input-bg);
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--button-color);
+}
+
+/* Estilo para los botones */
+/* Estilo para los botones */
+.button-grid {
+    display: flex;
+    justify-content: center; /* Centra los botones en la fila */
+    align-items: center;
+    gap: 15px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Permite que los botones pasen a la siguiente línea si no hay espacio */
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--button-color); /* Usé tu variable, es una buena práctica */
+    color: white; /* Color de texto blanco para que se vea en el botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Una sombra más sutil para un mejor efecto */
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Estas propiedades no tienen sentido en :hover, las elimino */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+/* Estilo específico para los botones de operadores */
+.operator {
+  background-color: var(--operator-color);
+}
+
+.operator:hover {
+  background-color: var(--operator-hover-color);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
